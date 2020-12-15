@@ -9,6 +9,7 @@
         <img src="{{ urlImagem }}">
         <img [src]="urlImagem">
     </article-->
+    <!--Aula Binding de Classe e de estilo
     <article>
         <h3>Class e Style Binding</h3>
         <div>
@@ -21,7 +22,7 @@
             </select>
             <br><br>
 
-            <!--Colorindo a mensagem conforme a seleção no dropdown-->
+            Colorindo a mensagem conforme a seleção no dropdown
             <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
                 Sucesso
             </div>
@@ -35,17 +36,43 @@
                 Erro
             </div>
 
-            <!--Colorindo um texto conforme a seleção no dropdown-->
+            Colorindo um texto conforme a seleção no dropdown
             <div class="alert {{ classe.value }}" role="alert">
                 Texto colorido conforme valor selecionado no combobox.
             </div>
 
-            <!--Binding de estilo alterando o aparrecimento ou não da div-->
+            Binding de estilo alterando o aparrecimento ou não da div
             <div class="alert alert-danger" role="alert" 
             [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
                 Esse texto somente aparece em caso de erro.
             </div>
-
         </div>
+    </article-->
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button class="btn btn-primary" (click)="botaoClicado()">
+                Me clique!
+            </button>
+        </div>
+        <br><br>
+
+        <!--Inclui um campo input e fica escutando cada vez que uma tecla é digitada
+            chama o metodo onKeyUp passando o evento como parâmetro-->
+        <input type="text" (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput />
+
+        <p>Valor atual: {{ valorAtual }}</p>
+        <p>Valor salvo: {{ valorSalvo }}</p>
+        <br><br>
+        <!--Escutando Eventos do mouse-->
+        <span
+            (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highlight]="isMouseOver">
+            Passe o mouse sobre mim
+        </span>
     </article>
 </section>
