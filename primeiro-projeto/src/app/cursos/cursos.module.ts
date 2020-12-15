@@ -9,6 +9,9 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
   declarations: [CursosComponent, CursoDetalheComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CursosComponent
   ]
 })
 export class CursosModule { }
