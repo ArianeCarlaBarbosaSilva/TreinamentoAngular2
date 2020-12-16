@@ -18,7 +18,7 @@ export class DataBindingComponent implements OnInit {
   valorInicial = 15;
 
   onMudouValor(evento){
-    console.log(evento.novoValor);
+    //console.log(evento.novoValor);
   }
   
   constructor() { }
