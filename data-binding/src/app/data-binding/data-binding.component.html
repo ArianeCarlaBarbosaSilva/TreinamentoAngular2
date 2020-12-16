@@ -1,5 +1,5 @@
-<section>
-    <!--Interpolação e Property Binding
+<!--section>
+    Interpolação e Property Binding
     <article>
         <h3>Interpolação</h3>
         <p>String renderizada com Interpolação: {{ url }}</p>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </article-->
-    <article>
+    <!--article>
         <h3>Event Binding</h3>
         <div>
             <button class="btn btn-primary" (click)="botaoClicado()">
@@ -57,8 +57,8 @@
         </div>
         <br><br>
 
-        <!--Inclui um campo input e fica escutando cada vez que uma tecla é digitada
-            chama o metodo onKeyUp passando o evento como parâmetro-->
+        Inclui um campo input e fica escutando cada vez que uma tecla é digitada
+            chama o metodo onKeyUp passando o evento como parâmetro
         <input type="text" (keyup)="onKeyUp($event)"
         (keyup.enter)="salvarValor(campoInput.value)"
         (blur)="salvarValor(campoInput.value)"
@@ -67,7 +67,7 @@
         <p>Valor atual: {{ valorAtual }}</p>
         <p>Valor salvo: {{ valorSalvo }}</p>
         <br><br>
-        <!--Escutando Eventos do mouse-->
+        Escutando Eventos do mouse
         <span
             (mouseover)="onMouseOverOut()"
             (mouseout)="onMouseOverOut()"
@@ -75,4 +75,6 @@
             Passe o mouse sobre mim
         </span>
     </article>
-</section>
+</section-->
+
+<app-meu-form></app-meu-form>
