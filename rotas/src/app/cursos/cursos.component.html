@@ -1,0 +1,17 @@
+
+        <p>Lista de Cursos</p>
+
+        <p>Página: {{ pagina }}</p>
+
+        <!--Para passar informacao na rota, passamos um array onde o primeiro parametro 
+            é o nome da rota e o segundo a informacao-->
+        <div class="collection">
+            <a class="collection-item"
+                *ngFor="let curso of cursos"
+                [routerLink]="['/cursos', curso.id]">
+                {{ curso.nome }}
+            </a>    
+        </div>
+    
+        <button (click)="proximaPagina()">Prox Página</button>
+
